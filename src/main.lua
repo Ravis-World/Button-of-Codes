@@ -3,7 +3,6 @@
 -- BUTTON OF CODES - ROGUELIKE MINIGAME GAUNTLET HORROR ENGINE
 -- File: ./src/main.lua
 -- ============================================================================
-
 package.path = package.path .. ";./src/?.lua;./?.lua;src/?.lua"
 
 local ShiftManager = require("shift_manager")
@@ -107,7 +106,7 @@ local function runCodeMinigame(code)
     print("NIGHT SHIFT " .. engine.currentShift .. " | SANITY: " .. engine.sanity .. "% | PROGRESS: " .. engine.alertsSolved .. "/19")
     print("PROTOCOL RANK " .. code.rank .. ": " .. string.upper(code.name))
     print("--------------------------------------------------\n")
-
+    
     -- MINIGAME 1: Code Lavender (Calm / Breathing Input)
     if code.rank == 1 then
         print("ALERT: Panic spiking in Ward 4B! Execute emotional de-escalation protocol.")
@@ -115,15 +114,15 @@ local function runCodeMinigame(code)
         io.write("Enter command: ")
         local input = io.read()
         return input == "[CALM]" or input == "CALM" or input == "calm"
-
+    
     -- MINIGAME 2: Code Orange (Hazmat neutralisation Code)
     elseif code.rank == 2 then
         print("ALERT: Hazardous spill reported! Enter chemical sealant code.")
-        print("Required key combination: **-!!!-##\n** = atomic number of the metal Iridium\n!!! = 1 of Hungary and 2 of Azerbaijan\n## = 3 squared times 11")
+        print("Required key combination: **-!!!-##\n** = atomic number of the metal Iridium\n!!! = 1 of Hungary and 2 of Azerbaijan\n## = 3 squared times 11\n")
         io.write("Enter neutralisation code: ")
         local input = io.read()
         return input == "77-HAZ-99"
-
+    
     -- MINIGAME 3: Code Green (Elopement Lock Sequence)
     elseif code.rank == 3 then
         print("ALERT: Patient elopement detected! Lock your ward doors.")
@@ -131,7 +130,43 @@ local function runCodeMinigame(code)
         io.write("Enter command: ")
         local input = io.read()
         return string.upper(input) == "LOCK 4B"
-
+    
+    -- MINIGAME 4: Code Adam (Missing Child Search - Age 5-10)
+    elseif code.rank == 4 then
+        print("ALERT: CODE ADAM - MISSING CHILD DISPATCH")
+        print("LOG DETAILS: 'Young child last seen near Ped-Wing. Features: Blonde hair, Blue eyes.'")
+        print("Security monitor feeds show 3 individuals heading for the exit:\n")
+        print("  1. Klaes Dorsey: Red hair, Green eyes")
+        print("  2. Ascanius Alvarado: Blonde hair, Blue eyes")
+        print("  3. Tatianna Zuiderduin: Brown hair, Blue eyes\n")
+        io.write("Call out the correct suspect to intercept (1-3 or A/B/C): ")
+        local input = string.upper(io.read())
+        return input == "2" or input == "B"
+    
+    -- MINIGAME 5: Code Purple (Older Child Abduction - Age 11-17)
+    elseif code.rank == 5 then
+        print("ALERT: CODE PURPLE - OLDER CHILD ABDUCTION")
+        print("LOG DETAILS: 'Pre-teen forced into stairwell. Features: Black hair, Hazel eyes.'")
+        print("Security monitor feeds show 3 individuals moving through the basement:\n")
+        print("  1. Henriette Levi: Black hair, Hazel eyes")
+        print("  2. Bogdan Aiken: Black hair, Brown eyes")
+        print("  3. Rozalia Berkovich: Auburn hair, Hazel eyes\n")
+        io.write("Call out the correct suspect to intercept (1-3 or A/B/C): ")
+        local input = string.upper(io.read())
+        return input == "1" or input == "A"
+    
+    -- MINIGAME 6: Code Pink (Infant Abduction Interception)
+    elseif code.rank == 6 then
+        print("ALERT: CODE PINK - INFANT ABDUCTION INTERCEPTION")
+        print("LOG DETAILS: 'Infant nursery tag triggered. Suspect carrying bundle. Features: Brown hair, Grey eyes.'")
+        print("Security monitor feeds show 3 figures near the main lobby doors:\n")
+        print("  1. Boryana Alberghini: Blonde hair, Grey eyes")
+        print("  2. Donte Garbo: Brown hair, Blue eyes")
+        print("  3. Fatima Chaudhary: Brown hair, Grey eyes\n")
+        io.write("Call out the correct suspect to intercept (1-3 or A/B/C): ")
+        local input = string.upper(io.read())
+        return input == "3" or input == "C"
+    
     -- DEFAULT MINIGAME HANDLER FOR OTHER RANKS (Reaction Command)
     else
         local targetWord = string.upper(code.name)
