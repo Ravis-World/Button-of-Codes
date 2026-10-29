@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lua",
+            "request": "launch",
+            "name": "Run Button of Codes (F5)",
+            "program": "${workspaceFolder}/src/main.lua"
+        }
+    ],
+    "cwd": "${workspaceFolder}"
+}

@@ -1,5 +1,5 @@
 # VS Code
-.vscode/
+.vscode/settings.json
 
 # Compiled Lua sources
 luac.out

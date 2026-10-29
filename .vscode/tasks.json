@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Button of Codes (Console)",
+            "type": "shell",
+            "command": "lua",
+            "args": ["${workspaceFolder}/src/main.lua"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
