@@ -2,7 +2,7 @@
 
 > *"It’s 3:14 AM on Thanksgiving Night in Ward 4B. Cold leftover turkey sits wrapped in foil on your desk. Out in the dimly lit hallway, an ancient entity known as **The Carver** looms—feeding on tryptophan drowsiness, fear, and human error..."*
 
-**Button of Codes: Thanksgiving Horror** is a fast-paced, text-based terminal roguelike horror game built in pure Lua. Operate the hospital's emergency console and resolve **19 escalating emergency protocols** in sequential order before your alertness hits zero. One wrong command, and Ward 4B belongs to the Carver.
+**Button of Codes: Thanksgiving Horror** is a fast-paced, text-based terminal horror game built in pure Lua. Operate the hospital's emergency console and resolve **19 escalating emergency protocols** in sequential order before your alertness hits zero. One wrong command, and Ward 4B belongs to the Carver.
 
 ## 🕹️ Key Features
 
